@@ -226,3 +226,35 @@ body {
         margin: 20px auto;
     }
 }
+
+/* Modern Color Swatches Styles */
+.modern-color-picker {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    direction: rtl;
+    padding: 4px 0;
+}
+
+.color-dot-label {
+    cursor: pointer;
+    position: relative;
+}
+
+.color-dot-label input[type="radio"] {
+    display: none;
+}
+
+.color-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.color-dot-label input[type="radio"]:checked + .color-dot {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 3px #09090b, 0 0 0 5px #10b981;
+}
