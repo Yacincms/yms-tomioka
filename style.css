@@ -446,3 +446,47 @@ body {
     box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
     transform: scale(1.05);
 }
+
+/* Clean Horizontal Color Picker */
+.color-picker-row {
+    display: flex;
+    gap: 10px;
+    direction: rtl;
+}
+
+.color-option {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #09090b;
+    border: 1px solid #3f3f46;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.color-option input[type="radio"] {
+    accent-color: #10b981;
+}
+
+.color-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.color-name {
+    color: #f4f4f5;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Active Highlight */
+.color-option:has(input[type="radio"]:checked) {
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.08);
+}
