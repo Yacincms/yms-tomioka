@@ -490,3 +490,43 @@ body {
     border-color: #10b981;
     background: rgba(16, 185, 129, 0.08);
 }
+/* Clean Framed Color Pills */
+.color-pills-row {
+    display: flex;
+    gap: 10px;
+    direction: rtl;
+}
+
+.color-pill {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #09090b;
+    border: 1px solid #3f3f46;
+    padding: 12px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #f4f4f5;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.color-pill input[type="radio"] {
+    display: none; /* Hide native radio dot completely */
+}
+
+.pill-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Active Highlight with Emerald Border & Glow */
+.color-pill:has(input[type="radio"]:checked) {
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.08);
+}
