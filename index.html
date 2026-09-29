@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YMS | Tomioka Giyu Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <span>🔥 توصيل سريع متوفر لـ 58 ولاية | الدفع عند الاستلام</span>
+    </div>
+
+    <!-- Main Wrapper simulating the high-end desktop/mobile split layout -->
+    <div class="page-wrapper">
+        
+        <!-- Left/Top Column: Product Visuals & Gallery -->
+        <div class="product-visuals">
+            <div class="main-image-box">
+                <img id="active-img" src="product-1.jpg" alt="T-shirt Giyu Tomioka">
+            </div>
+            <!-- Thumbnails Gallery -->
+            <div class="thumbnail-gallery">
+                <img src="product-1.jpg" onclick="changeImage('product-1.jpg')" alt="Thumbnail 1">
+                <img src="product-2.jpg" onclick="changeImage('product-2.jpg')" alt="Thumbnail 2">
+                <img src="product-3.jpg" onclick="changeImage('product-3.jpg')" alt="Thumbnail 3">
+            </div>
+        </div>
+
+        <!-- Right/Bottom Column: Product Info & Direct COD Form -->
+        <div class="product-purchase-section">
+            <div class="brand-tag">YMS STREETWEAR</div>
+            <h1 class="product-title">T-shirt Giyu Tomioka - Oversized</h1>
+            
+            <div class="price-box">
+                <span class="old-price">3,500 دج</span>
+                <span class="current-price">2,800 دج</span>
+            </div>
+
+            <p class="product-desc">
+                تصميم فريد بجودة طباعة عالية جداً (DTF). قطن ثقيل مخصص لفصل الشتاء والصيف، مريح ومقاوم للتلف.
+            </p>
+
+            <!-- Direct COD Form Box -->
+            <div class="order-box">
+                <h3>الدفع عند الاستلام</h3>
+                <p class="form-instruction">الرجاء إدخال معلوماتك الخاصة بك:</p>
+
+                <form action="https://api.web3forms.com/submit" method="POST" class="cod-form">
+                    <!-- Replace YOUR_ACCESS_KEY_HERE later with your free Web3Forms key -->
+                    <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE">
+
+                    <div class="input-group">
+                        <label>الاسم الكامل *</label>
+                        <input type="text" name="name" required placeholder="أدخل اسمك الكامل">
+                    </div>
+
+                    <div class="input-group">
+                        <label>رقم الهاتف *</label>
+                        <input type="tel" name="phone" required placeholder="05 / 06 / 07 ...">
+                    </div>
+
+                    <div class="input-group">
+                        <label>الولاية *</label>
+                        <input type="text" name="wilaya" required placeholder="مثال: الجزائر، وهران، البليدة...">
+                    </div>
+
+                    <div class="input-group">
+                        <label>المقاس *</label>
+                        <select name="size">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="order-btn">اطلب الآن - الدفع عند الاستلام 🛒</button>
+                </form>
+            </div>
+
+            <!-- Footer link back to main Takka store -->
+            <div class="store-redirect">
+                <a href="https://ymsdz.com" target="_blank">تصفح الكاتالوج الكامل في المتجر الرئيسي 🛍️</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function changeImage(filename) {
+            document.getElementById('active-img').src = filename;
+        }
+    </script>
+</body>
+</html>
