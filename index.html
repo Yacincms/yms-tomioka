@@ -33,7 +33,7 @@
         <!-- Right/Bottom Column: Product Info & Direct COD Form -->
         <div class="product-purchase-section">
             <div class="brand-tag">YMS STREETWEAR</div>
-            <h1 class="product-title">T-shirt Giyu Tomioka</h1>
+            <h1 class="product-title">T-shirt Giyu Tomioka - Oversized</h1>
             
             <div class="price-box">
                 <span class="old-price">3,500 دج</span>
@@ -62,15 +62,6 @@
                         </div>
                     </div>
 
-                    <!-- Model Selection -->
-                    <div class="input-group">
-                        <label>الموديل *</label>
-                        <div class="options-grid">
-                            <label class="radio-card"><input type="radio" name="model" value="أورفسايز" checked> أورفسايز</label>
-                            <label class="radio-card"><input type="radio" name="model" value="عادي"> عادي</label>
-                        </div>
-                    </div>
-
                     <!-- Print Placement Selection -->
                     <div class="input-group">
                         <label>مكان الطباعة *</label>
@@ -91,13 +82,42 @@
                         </select>
                     </div>
 
-                    <!-- Delivery Type Selection -->
+                    <!-- Wilaya Selection (Drives Shipping Cost) -->
                     <div class="input-group">
-                        <label>نوع التوصيل *</label>
+                        <label>الولاية *</label>
+                        <select name="wilaya" id="wilaya-select" onchange="updateShipping()" required>
+                            <option value="الجزائر" data-home="400" data-desk="400" selected>16. الجزائر (منزل: 400 دج | مكتب: 400 دج)</option>
+                            <option value="تيبازة، بومرداس، البليدة" data-home="600" data-desk="400">تيبازة، بومرداس، البليدة (منزل: 600 دج | مكتب: 400 دج)</option>
+                            <option value="وهران، قسنطينة، عنابة، سطيف، بجاية، باتنة..." data-home="700" data-desk="400">الولايات الكبرى - وهران، قسنطينة، سطيف... (منزل: 700 دج | مكتب: 400 دج)</option>
+                            <option value="غرداية، الوادي، ورقلة، بسكرة..." data-home="850" data-desk="555">غرداية، الوادي، ورقلة، بسكرة... (منزل: 850 دج | مكتب: 555 دج)</option>
+                            <option value="أولاد جلال، تقرت، الأغواط..." data-home="900" data-desk="500">أولاد جلال، تقرت، الأغواط... (منزل: 900 دج | مكتب: 500 دج)</option>
+                            <option value="تيميمون، برج باجي مختار، بني عباس" data-home="1300" data-desk="850">تيميمون، برج باجي مختار، بني عباس (منزل: 1300 دج | مكتب: 850 دج)</option>
+                            <option value="النعامة، البيض، بشار، أدرار" data-home="1350" data-desk="900">النعامة، البيض، بشار، أدرار (منزل: 1350 دج | مكتب: 900 دج)</option>
+                            <option value="عين صالح، عين قزام، جانت" data-home="1500" data-desk="1250">عين صالح، عين قزام، جانت (منزل: 1500 دج | مكتب: 1250 دج)</option>
+                            <option value="تندوف، إليزي، تمنراست" data-home="1550" data-desk="1300">تندوف، إليزي، تمنراست (منزل: 1550 دج | مكتب: 1300 دج)</option>
+                        </select>
+                    </div>
+
+                    <!-- Delivery Type Options (Updates price instantly based on selected Wilaya) -->
+                    <div class="input-group">
+                        <label>طريقة التوصيل *</label>
                         <div class="options-grid">
-                            <label class="radio-card"><input type="radio" name="delivery_type" value="توصيل للمكتب (Desk)" checked> للمكتب (Stop Desk)</label>
-                            <label class="radio-card"><input type="radio" name="delivery_type" value="توصيل للمنزل (Home)"> للمنزل</label>
+                            <label class="radio-card">
+                                <input type="radio" name="delivery_type" value="توصيل للمكتب (Stop Desk)" checked onchange="updateShipping()"> 
+                                توصيل للمكتب
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="delivery_type" value="توصيل للمنزل (Home)" onchange="updateShipping()"> 
+                                توصيل للمنزل
+                            </label>
                         </div>
+                    </div>
+
+                    <!-- Live Price Breakdown Box -->
+                    <div class="price-breakdown">
+                        <div class="line-item"><span>سعر المنتج:</span> <span>2,800 دج</span></div>
+                        <div class="line-item"><span>سعر التوصيل:</span> <span id="shipping-display">400 دج</span></div>
+                        <div class="line-item total-item"><span>المجموع الكلي:</span> <span id="total-display">3,200 دج</span></div>
                     </div>
 
                     <div class="input-group">
@@ -108,11 +128,6 @@
                     <div class="input-group">
                         <label>رقم الهاتف *</label>
                         <input type="tel" name="phone" required placeholder="05 / 06 / 07 ...">
-                    </div>
-
-                    <div class="input-group">
-                        <label>الولاية *</label>
-                        <input type="text" name="wilaya" required placeholder="مثال: الجزائر، وهران، البليدة...">
                     </div>
 
                     <button type="submit" class="order-btn">اطلب الآن - الدفع عند الاستلام 🛒</button>
@@ -130,6 +145,26 @@
     <script>
         function changeImage(filename) {
             document.getElementById('active-img').src = filename;
+        }
+
+        function updateShipping() {
+            const productPrice = 2800;
+            const wilayaSelect = document.getElementById('wilaya-select');
+            const selectedOption = wilayaSelect.options[wilayaSelect.selectedIndex];
+            
+            const deliveryType = document.querySelector('input[name="delivery_type"]:checked').value;
+            let shippingPrice = 0;
+
+            if (deliveryType.includes('Home')) {
+                shippingPrice = parseInt(selectedOption.getAttribute('data-home'));
+            } else {
+                shippingPrice = parseInt(selectedOption.getAttribute('data-desk'));
+            }
+
+            const totalPrice = productPrice + shippingPrice;
+
+            document.getElementById('shipping-display').innerText = shippingPrice.toLocaleString() + ' دج';
+            document.getElementById('total-display').innerText = totalPrice.toLocaleString() + ' دج';
         }
     </script>
 </body>
