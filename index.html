@@ -52,6 +52,18 @@
                 <form action="https://api.web3forms.com/submit" method="POST" class="cod-form">
                     <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE">
 
+                    <!-- 1. Name Field (At the Top) -->
+                    <div class="input-group">
+                        <label>الاسم الكامل *</label>
+                        <input type="text" name="name" required placeholder="أدخل اسمك الكامل">
+                    </div>
+
+                    <!-- 2. Phone Field (At the Top) -->
+                    <div class="input-group">
+                        <label>رقم الهاتف *</label>
+                        <input type="tel" name="phone" required placeholder="05 / 06 / 07 ...">
+                    </div>
+
                     <!-- Color Selection -->
                     <div class="input-group">
                         <label>اللون *</label>
@@ -82,7 +94,7 @@
                         </select>
                     </div>
 
-                    <!-- Wilaya Selection (Ordered 01 to 58) -->
+                    <!-- Wilaya Selection (01 to 58) -->
                     <div class="input-group">
                         <label>الولاية *</label>
                         <select name="wilaya" id="wilaya-select" onchange="updateShipping()" required>
@@ -147,6 +159,12 @@
                         </select>
                     </div>
 
+                    <!-- Baladia (Municipality / Stop Desk location) Field -->
+                    <div class="input-group">
+                        <label>البلدية أو مكتب التوصيل *</label>
+                        <input type="text" name="baladia" required placeholder="أدخل اسم البلدية (مثال: باب الزوار)">
+                    </div>
+
                     <!-- Delivery Type Options -->
                     <div class="input-group">
                         <label>طريقة التوصيل *</label>
@@ -167,16 +185,6 @@
                         <div class="line-item"><span>سعر المنتج:</span> <span>2,800 دج</span></div>
                         <div class="line-item"><span>سعر التوصيل:</span> <span id="shipping-display">400 دج</span></div>
                         <div class="line-item total-item"><span>المجموع الكلي:</span> <span id="total-display">3,200 دج</span></div>
-                    </div>
-
-                    <div class="input-group">
-                        <label>الاسم الكامل *</label>
-                        <input type="text" name="name" required placeholder="أدخل اسمك الكامل">
-                    </div>
-
-                    <div class="input-group">
-                        <label>رقم الهاتف *</label>
-                        <input type="tel" name="phone" required placeholder="05 / 06 / 07 ...">
                     </div>
 
                     <button type="submit" class="order-btn">اطلب الآن - الدفع عند الاستلام 🛒</button>
