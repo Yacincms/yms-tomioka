@@ -263,3 +263,41 @@ body {
 body {
     background-color: #121216 !important;
 }
+
+
+/* Custom modifications to make the orb buttons work as form radio selections */
+.button-stack .btn-wrapper {
+    opacity: 1 !important;
+    animation: none !important;
+    flex-direction: row-reverse;
+}
+
+.button-stack .orb-btn {
+    width: 3.2em;
+    height: 3.2em;
+    cursor: pointer;
+}
+
+/* Highlight and animate the orb when its hidden radio button is selected */
+.button-stack .btn-wrapper input[type="radio"]:checked + .orb-btn {
+    transform: scale(1.1);
+    box-shadow: 
+        inset 0 0 30px 4px rgba(var(--glow-color), 0.6),
+        0 0 40px 8px rgba(var(--glow-color), 0.4);
+    border: 2px solid #10b981;
+}
+
+.button-stack .btn-wrapper input[type="radio"]:checked + .orb-btn svg path {
+    stroke-dashoffset: 0 !important;
+}
+
+.button-stack .btn-label {
+    position: static !important;
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    color: #f4f4f5;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 8px;
+}
