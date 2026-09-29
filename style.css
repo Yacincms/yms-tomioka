@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Tajawal', sans-serif;
+}
+
+body {
+    background-color: #0b0b0f;
+    color: #f3f4f6;
+    line-height: 1.6;
+}
+
+.announcement-bar {
+    background: #10b981;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.page-wrapper {
+    max-width: 1000px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.product-visuals {
+    flex: 1;
+    min-width: 300px;
+}
+
+.main-image-box {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #18181b;
+    border: 1px style solid #27272a;
+}
+
+.main-image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.thumbnail-gallery {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.thumbnail-gallery img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #27272a;
+    transition: border-color 0.2s;
+}
+
+.thumbnail-gallery img:hover {
+    border-color: #10b981;
+}
+
+.product-purchase-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.brand-tag {
+    font-size: 12px;
+    font-weight: 700;
+    color: #9ca3af;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.product-title {
+    font-size: 26px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.price-box {
+    margin-bottom: 20px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #71717a;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.current-price {
+    font-size: 24px;
+    font-weight: 900;
+    color: #10b981;
+}
+
+.product-desc {
+    font-size: 14px;
+    color: #d1d5db;
+    margin-bottom: 25px;
+}
+
+.order-box {
+    background: #18181b;
+    border: 1px solid #27272a;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.order-box h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.form-instruction {
+    font-size: 13px;
+    color: #9ca3af;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #e5e7eb;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 12px;
+    background: #09090b;
+    border: 1px solid #3f3f46;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.input-group input:focus, .input-group select:focus {
+    outline: none;
+    border-color: #10b981;
+}
+
+.order-btn {
+    width: 100%;
+    background: #10b981;
+    color: #000;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+
+.order-btn:hover {
+    background: #059669;
+    color: #fff;
+}
+
+.store-redirect {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.store-redirect a {
+    color: #818cf8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.store-redirect a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .page-wrapper {
+        flex-direction: column;
+        margin: 20px auto;
+    }
+}
