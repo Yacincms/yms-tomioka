@@ -14,7 +14,7 @@
         <span>🔥 توصيل سريع متوفر لـ 58 ولاية | الدفع عند الاستلام</span>
     </div>
 
-    <!-- Main Wrapper simulating the high-end desktop/mobile split layout -->
+    <!-- Main Wrapper -->
     <div class="page-wrapper">
         
         <!-- Left/Top Column: Product Visuals & Gallery -->
@@ -33,25 +33,72 @@
         <!-- Right/Bottom Column: Product Info & Direct COD Form -->
         <div class="product-purchase-section">
             <div class="brand-tag">YMS STREETWEAR</div>
-            <h1 class="product-title">T-shirt Giyu Tomioka - Oversized</h1>
+            <h1 class="product-title">T-shirt Giyu Tomioka</h1>
             
             <div class="price-box">
                 <span class="old-price">3,500 دج</span>
                 <span class="current-price">2,800 دج</span>
             </div>
 
-           <p class="product-desc">
-    تصميم فريد بجودة طباعة عالية جداً (DTF). قطن مريح وعالي الجودة، مصمم خصيصاً لعشاق الشارع.
-</p>
+            <p class="product-desc">
+                تصميم فريد بجودة طباعة عالية جداً (DTF). قطن مريح وعالي الجودة، مصمم خصيصاً لعشاق الشارع.
+            </p>
 
             <!-- Direct COD Form Box -->
             <div class="order-box">
                 <h3>الدفع عند الاستلام</h3>
-                <p class="form-instruction">الرجاء إدخال معلوماتك الخاصة بك:</p>
+                <p class="form-instruction">الرجاء إدخال معلوماتك وتحديد الخيارات:</p>
 
                 <form action="https://api.web3forms.com/submit" method="POST" class="cod-form">
-                    <!-- Replace YOUR_ACCESS_KEY_HERE later with your free Web3Forms key -->
                     <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE">
+
+                    <!-- Color Selection -->
+                    <div class="input-group">
+                        <label>اللون *</label>
+                        <div class="options-grid">
+                            <label class="radio-card"><input type="radio" name="color" value="أسود" checked> أسود</label>
+                            <label class="radio-card"><input type="radio" name="color" value="أبيض"> أبيض</label>
+                            <label class="radio-card"><input type="radio" name="color" value="أخضر"> أخضر</label>
+                        </div>
+                    </div>
+
+                    <!-- Model Selection -->
+                    <div class="input-group">
+                        <label>الموديل *</label>
+                        <div class="options-grid">
+                            <label class="radio-card"><input type="radio" name="model" value="أورفسايز" checked> أورفسايز</label>
+                            <label class="radio-card"><input type="radio" name="model" value="عادي"> عادي</label>
+                        </div>
+                    </div>
+
+                    <!-- Print Placement Selection -->
+                    <div class="input-group">
+                        <label>مكان الطباعة *</label>
+                        <div class="options-grid">
+                            <label class="radio-card"><input type="radio" name="print_placement" value="الواجهة الأمامية" checked> الواجهة الأمامية</label>
+                            <label class="radio-card"><input type="radio" name="print_placement" value="الواجهة الخلفية"> الواجهة الخلفية</label>
+                        </div>
+                    </div>
+
+                    <!-- Size Selection -->
+                    <div class="input-group">
+                        <label>المقاس *</label>
+                        <select name="size">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+
+                    <!-- Delivery Type Selection -->
+                    <div class="input-group">
+                        <label>نوع التوصيل *</label>
+                        <div class="options-grid">
+                            <label class="radio-card"><input type="radio" name="delivery_type" value="توصيل للمكتب (Desk)" checked> للمكتب (Stop Desk)</label>
+                            <label class="radio-card"><input type="radio" name="delivery_type" value="توصيل للمنزل (Home)"> للمنزل</label>
+                        </div>
+                    </div>
 
                     <div class="input-group">
                         <label>الاسم الكامل *</label>
@@ -66,16 +113,6 @@
                     <div class="input-group">
                         <label>الولاية *</label>
                         <input type="text" name="wilaya" required placeholder="مثال: الجزائر، وهران، البليدة...">
-                    </div>
-
-                    <div class="input-group">
-                        <label>المقاس *</label>
-                        <select name="size">
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="L">L</option>
-                            <option value="XL">XL</option>
-                        </select>
                     </div>
 
                     <button type="submit" class="order-btn">اطلب الآن - الدفع عند الاستلام 🛒</button>
