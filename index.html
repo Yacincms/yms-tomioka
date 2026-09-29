@@ -64,21 +64,24 @@
                         <input type="tel" name="phone" required placeholder="أدخل رقم هاتفك" style="direction: rtl; text-align: right;">
                     </div>
 
-                <!-- Clean Framed Color Dots Selection -->
+              <!-- Color Selection -->
                     <div class="input-group">
                         <label>اللون *</label>
-                        <div class="store-color-picker">
-                            <label class="store-dot-label" title="أخضر">
-                                <input type="radio" name="color" value="أخضر">
-                                <span class="store-dot" style="background-color: #30563b;"></span>
-                            </label>
-                            <label class="store-dot-label" title="أبيض">
-                                <input type="radio" name="color" value="أبيض">
-                                <span class="store-dot" style="background-color: #ffffff; border: 1px solid #d1d5db;"></span>
-                            </label>
-                            <label class="store-dot-label" title="أسود">
+                        <div class="color-picker-row">
+                            <label class="color-option">
                                 <input type="radio" name="color" value="أسود" checked>
-                                <span class="store-dot" style="background-color: #000000; border: 1px solid #52525b;"></span>
+                                <span class="color-circle" style="background: #000; border: 1px solid #52525b;"></span>
+                                <span class="color-name">أسود</span>
+                            </label>
+                            <label class="color-option">
+                                <input type="radio" name="color" value="أبيض">
+                                <span class="color-circle" style="background: #fff; border: 1px solid #d1d5db;"></span>
+                                <span class="color-name">أبيض</span>
+                            </label>
+                            <label class="color-option">
+                                <input type="radio" name="color" value="أخضر">
+                                <span class="color-circle" style="background: #30563b;"></span>
+                                <span class="color-name">أخضر</span>
                             </label>
                         </div>
                     </div>
