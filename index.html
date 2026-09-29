@@ -82,82 +82,68 @@
                         </select>
                     </div>
 
-                    <!-- Wilaya Selection (Clean names & numbers, tier data-attributes) -->
+                    <!-- Wilaya Selection (Ordered 01 to 58) -->
                     <div class="input-group">
                         <label>الولاية *</label>
                         <select name="wilaya" id="wilaya-select" onchange="updateShipping()" required>
-                            <!-- Tier 1: Algiers (Home: 400 | Desk: 400) -->
-                            <option value="16. الجزائر" data-home="400" data-desk="400" selected>16. الجزائر</option>
-                            
-                            <!-- Tier 2: Tipaza, Boumerdès, Blida (Home: 600 | Desk: 400) -->
-                            <option value="09. البليدة" data-home="600" data-desk="400">09. البليدة</option>
-                            <option value="35. بومرداس" data-home="600" data-desk="400">35. بومرداس</option>
-                            <option value="42. تيبازة" data-home="600" data-desk="400">42. تيبازة</option>
-
-                            <!-- Tier 3: Major Wilayas - Oran, Constantine, Annaba, Sétif, etc. (Home: 700 | Desk: 400) -->
-                            <option value="31. وهران" data-home="700" data-desk="400">31. وهران</option>
-                            <option value="25. قسنطينة" data-home="700" data-desk="400">25. قسنطينة</option>
-                            <option value="23. عنابة" data-home="700" data-desk="400">23. عنابة</option>
-                            <option value="19. سطيف" data-home="700" data-desk="400">19. سطيف</option>
-                            <option value="06. بجاية" data-home="700" data-desk="400">06. بجاية</option>
+                            <option value="01. أدرار" data-home="1350" data-desk="900">01. أدرار</option>
+                            <option value="02. الشلف" data-home="700" data-desk="400">02. الشلف</option>
+                            <option value="03. الأغواط" data-home="850" data-desk="555">03. الأغواط</option>
+                            <option value="04. أم البواقي" data-home="700" data-desk="400">04. أم البواقي</option>
                             <option value="05. باتنة" data-home="700" data-desk="400">05. باتنة</option>
-                            <option value="15. تيزي وزو" data-home="700" data-desk="400">15. تيزي وزو</option>
-                            <option value="13. تلمسان" data-home="700" data-desk="400">13. تلمسان</option>
-                            <option value="26. المدية" data-home="700" data-desk="400">26. المدية</option>
+                            <option value="06. بجاية" data-home="700" data-desk="400">06. بجاية</option>
+                            <option value="07. بسكرة" data-home="700" data-desk="400">07. بسكرة</option>
+                            <option value="08. بشار" data-home="1350" data-desk="900">08. بشار</option>
+                            <option value="09. البليدة" data-home="600" data-desk="400">09. البليدة</option>
                             <option value="10. البويرة" data-home="700" data-desk="400">10. البويرة</option>
-                            <option value="36. الطارف" data-home="700" data-desk="400">36. الطارف</option>
-                            <option value="41. سوق أهراس" data-home="700" data-desk="400">41. سوق أهراس</option>
-                            <option value="34. برج بوعريريج" data-home="700" data-desk="400">34. برج بوعريريج</option>
-                            <option value="29. معسكر" data-home="700" data-desk="400">29. معسكر</option>
-                            <option value="43. ميلة" data-home="700" data-desk="400">43. ميلة</option>
-                            <option value="44. عين الدفلى" data-home="700" data-desk="400">44. عين الدفلى</option>
+                            <option value="11. تمنراست" data-home="1550" data-desk="1300">11. تمنراست</option>
+                            <option value="12. تبسة" data-home="850" data-desk="555">12. تبسة</option>
+                            <option value="13. تلمسان" data-home="700" data-desk="400">13. تلمسان</option>
+                            <option value="14. تيارت" data-home="700" data-desk="400">14. تيارت</option>
+                            <option value="15. تيزي وزو" data-home="700" data-desk="400">15. تيزي وزو</option>
+                            <option value="16. الجزائر" data-home="400" data-desk="400" selected>16. الجزائر</option>
+                            <option value="17. الجلفة" data-home="850" data-desk="555">17. الجلفة</option>
+                            <option value="18. جيجل" data-home="700" data-desk="400">18. جيجل</option>
+                            <option value="19. سطيف" data-home="700" data-desk="400">19. سطيف</option>
+                            <option value="20. سعيدة" data-home="700" data-desk="400">20. سعيدة</option>
+                            <option value="21. سكيكدة" data-home="700" data-desk="400">21. سكيكدة</option>
+                            <option value="22. سيدي بلعباس" data-home="700" data-desk="400">22. سيدي بلعباس</option>
+                            <option value="23. عنابة" data-home="700" data-desk="400">23. عنابة</option>
+                            <option value="24. قالمة" data-home="700" data-desk="400">24. قالمة</option>
+                            <option value="25. قسنطينة" data-home="700" data-desk="400">25. قسنطينة</option>
+                            <option value="26. المدية" data-home="700" data-desk="400">26. المدية</option>
                             <option value="27. مستغانم" data-home="700" data-desk="400">27. مستغانم</option>
                             <option value="28. المسيلة" data-home="700" data-desk="400">28. المسيلة</option>
-                            <option value="40. خنشلة" data-home="700" data-desk="400">40. خنشلة</option>
-                            <option value="45. الشلف" data-home="700" data-desk="400">45. الشلف</option>
-                            <option value="14. تيارت" data-home="700" data-desk="400">14. تيارت</option>
-                            <option value="38. تيسمسيلت" data-home="700" data-desk="400">38. تيسمسيلت</option>
-                            <option value="22. سيدي بلعباس" data-home="700" data-desk="400">22. سيدي بلعباس</option>
-                            <option value="21. سكيكدة" data-home="700" data-desk="400">21. سكيكدة</option>
-                            <option value="20. سعيدة" data-home="700" data-desk="400">20. سعيدة</option>
-                            <option value="18. جيجل" data-home="700" data-desk="400">18. جيجل</option>
-                            <option value="46. عين تيموشنت" data-home="700" data-desk="400">46. عين تيموشنت</option>
-                            <option value="07. بسكرة" data-home="700" data-desk="400">07. بسكرة</option>
-
-                            <!-- Tier 4: Ghardaia, El Oued, Ouargla, Djelfa, Tébessa, Laghouat (Home: 850 | Desk: 555) -->
-                            <option value="47. غرداية" data-home="850" data-desk="555">47. غرداية</option>
-                            <option value="39. الوادي" data-home="850" data-desk="555">39. الوادي</option>
+                            <option value="29. معسكر" data-home="700" data-desk="400">29. معسكر</option>
                             <option value="30. ورقلة" data-home="850" data-desk="555">30. ورقلة</option>
-                            <option value="17. الجلفة" data-home="850" data-desk="555">17. الجلفة</option>
-                            <option value="12. تبسة" data-home="850" data-desk="555">12. تبسة</option>
-                            <option value="03. الأغواط" data-home="850" data-desk="555">03. الأغواط</option>
-
-                            <!-- Tier 5: Ouled Djellal, Touggourt, El M'Ghair, El Menia (Home: 900 | Desk: 500) -->
-                            <option value="58. أولاد جلال" data-home="900" data-desk="500">58. أولاد جلال</option>
-                            <option value="55. تقرت" data-home="900" data-desk="500">55. تقرت</option>
-                            <option value="57. المغير" data-home="900" data-desk="500">57. المغير</option>
-                            <option value="59. المنيعة" data-home="900" data-desk="500">59. المنيعة</option>
-
-                            <!-- Tier 6: Timimoun, Bordj Badji Mokhtar, Beni Abbès (Home: 1300 | Desk: 850) -->
-                            <option value="53. تيميمون" data-home="1300" data-desk="850">53. تيميمون</option>
-                            <option value="50. برج باجي مختار" data-home="1300" data-desk="850">50. برج باجي مختار</option>
-                            <option value="56. بني عباس" data-home="1300" data-desk="850">56. بني عباس</option>
-
-                            <!-- Tier 7: Naâma, El Bayadh, Béchar, Adrar (Home: 1350 | Desk: 900) -->
-                            <option value="45. النعامة" data-home="1350" data-desk="900">45. النعامة</option>
+                            <option value="31. وهران" data-home="700" data-desk="400">31. وهران</option>
                             <option value="32. البيض" data-home="1350" data-desk="900">32. البيض</option>
-                            <option value="08. بشار" data-home="1350" data-desk="900">08. بشار</option>
-                            <option value="01. أدرار" data-home="1350" data-desk="900">01. أدرار</option>
-
-                            <!-- Tier 8: In Salah, In Guezzam, Djanet (Home: 1500 | Desk: 1250) -->
-                            <option value="52. عين صالح" data-home="1500" data-desk="1250">52. عين صالح</option>
-                            <option value="51. عين قزام" data-home="1500" data-desk="1250">51. عين قزام</option>
-                            <option value="54. جانت" data-home="1500" data-desk="1250">54. جانت</option>
-
-                            <!-- Tier 9: Tindouf, Illizi, Tamanrasset (Home: 1550 | Desk: 1300) -->
-                            <option value="37. تندوف" data-home="1550" data-desk="1300">37. تندوف</option>
                             <option value="33. إليزي" data-home="1550" data-desk="1300">33. إليزي</option>
-                            <option value="11. تمنراست" data-home="1550" data-desk="1300">11. تمنراست</option>
+                            <option value="34. برج بوعريريج" data-home="700" data-desk="400">34. برج بوعريريج</option>
+                            <option value="35. بومرداس" data-home="600" data-desk="400">35. بومرداس</option>
+                            <option value="36. الطارف" data-home="700" data-desk="400">36. الطارف</option>
+                            <option value="37. تندوف" data-home="1550" data-desk="1300">37. تندوف</option>
+                            <option value="38. تيسمسيلت" data-home="700" data-desk="400">38. تيسمسيلت</option>
+                            <option value="39. الوادي" data-home="850" data-desk="555">39. الوادي</option>
+                            <option value="40. خنشلة" data-home="700" data-desk="400">40. خنشلة</option>
+                            <option value="41. سوق أهراس" data-home="700" data-desk="400">41. سوق أهراس</option>
+                            <option value="42. تيبازة" data-home="600" data-desk="400">42. تيبازة</option>
+                            <option value="43. ميلة" data-home="700" data-desk="400">43. ميلة</option>
+                            <option value="44. عين الدفلى" data-home="700" data-desk="400">44. عين الدفلى</option>
+                            <option value="45. النعامة" data-home="1350" data-desk="900">45. النعامة</option>
+                            <option value="46. عين تيموشنت" data-home="700" data-desk="400">46. عين تيموشنت</option>
+                            <option value="47. غرداية" data-home="850" data-desk="555">47. غرداية</option>
+                            <option value="48. غليزان" data-home="700" data-desk="400">48. غليزان</option>
+                            <option value="49. أولاد جلال" data-home="900" data-desk="500">49. أولاد جلال</option>
+                            <option value="50. برج باجي مختار" data-home="1300" data-desk="850">50. برج باجي مختار</option>
+                            <option value="51. عين قزام" data-home="1500" data-desk="1250">51. عين قزام</option>
+                            <option value="52. عين صالح" data-home="1500" data-desk="1250">52. عين صالح</option>
+                            <option value="53. تيميمون" data-home="1300" data-desk="850">53. تيميمون</option>
+                            <option value="54. جانت" data-home="1500" data-desk="1250">54. جانت</option>
+                            <option value="55. تقرت" data-home="900" data-desk="500">55. تقرت</option>
+                            <option value="56. بني عباس" data-home="1300" data-desk="850">56. بني عباس</option>
+                            <option value="57. المغير" data-home="900" data-desk="500">57. المغير</option>
+                            <option value="58. المنيعة" data-home="900" data-desk="500">58. المنيعة</option>
                         </select>
                     </div>
 
