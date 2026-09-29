@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #0b0b0f;
+    background-color: #121216;
     color: #f3f4f6;
     line-height: 1.6;
 }
@@ -145,26 +145,34 @@ body {
 .options-grid {
     display: flex;
     gap: 10px;
+    direction: rtl;
 }
 
 .radio-card {
     flex: 1;
     background: #09090b;
     border: 1px solid #3f3f46;
-    padding: 10px;
+    padding: 12px 10px;
     text-align: center;
     border-radius: 8px;
     font-size: 14px;
+    color: #f4f4f5;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.2s ease;
 }
 
 .radio-card input {
-    margin-left: 5px;
+    margin-left: 6px;
+    accent-color: #10b981;
 }
 
 .radio-card:hover {
+    border-color: #71717a;
+}
+
+.radio-card:has(input[type="radio"]:checked) {
     border-color: #10b981;
+    background: rgba(16, 185, 129, 0.08);
 }
 
 .input-group input[type="text"], 
@@ -182,6 +190,36 @@ body {
 .input-group input:focus, .input-group select:focus {
     outline: none;
     border-color: #10b981;
+}
+
+.price-breakdown {
+    background: #09090b;
+    border: 1px solid #27272a;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.line-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #d1d5db;
+}
+
+.line-item:last-child {
+    margin-bottom: 0;
+}
+
+.total-item {
+    font-weight: 900;
+    font-size: 18px;
+    color: #10b981;
+    border-top: 1px solid #27272a;
+    padding-top: 8px;
+    margin-top: 8px;
 }
 
 .order-btn {
@@ -225,68 +263,4 @@ body {
         flex-direction: column;
         margin: 20px auto;
     }
-}
-
-/* Modern Color Swatches Styles */
-.modern-color-picker {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    direction: rtl;
-    padding: 4px 0;
-}
-
-.color-dot-label {
-    cursor: pointer;
-    position: relative;
-}
-
-.color-dot-label input[type="radio"] {
-    display: none;
-}
-
-.color-dot {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    display: block;
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.color-dot-label input[type="radio"]:checked + .color-dot {
-    transform: scale(1.1);
-    box-shadow: 0 0 0 3px #09090b, 0 0 0 5px #10b981;
-}
-
-.modern-color-picker {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    direction: rtl;
-    padding: 4px 0;
-}
-
-.color-dot-label {
-    cursor: pointer;
-    position: relative;
-}
-
-.color-dot-label input[type="radio"] {
-    display: none; /* Hide default radio button */
-}
-
-.color-dot {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    display: block;
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-/* Modern selection effect: adds a glowing outline ring when checked */
-.color-dot-label input[type="radio"]:checked + .color-dot {
-    transform: scale(1.1);
-    box-shadow: 0 0 0 3px #09090b, 0 0 0 5px #10b981;
 }
