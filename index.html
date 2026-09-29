@@ -64,47 +64,34 @@
                         <input type="tel" name="phone" required placeholder="أدخل رقم هاتفك" style="direction: rtl; text-align: right;">
                     </div>
 
-                   <!-- Color Selection using Glowing Orbs -->
+                  <!-- Glossy 3D Color Orbs Selection -->
                     <div class="input-group">
                         <label>اللون *</label>
-                        <div class="button-stack" style="display: flex; flex-direction: row; gap: 15px; padding: 10px 0;">
+                        <div class="glossy-orbs-container">
                             
                             <!-- Black Option -->
-                            <label class="btn-wrapper" style="opacity: 1; animation: none; cursor: pointer;">
-                                <input type="radio" name="color" value="أسود" checked style="display: none;">
-                                <div class="orb-btn btn-teal" style="--glow-color: 40, 40, 40;">
-                                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                                        <path d="M5 13 L10 17.5 L19 7"></path>
-                                    </svg>
-                                </div>
-                                <span class="btn-label" style="position: static; opacity: 1; filter: none; margin-right: 8px;">أسود</span>
+                            <label class="glossy-orb-card">
+                                <input type="radio" name="color" value="أسود" checked>
+                                <span class="glossy-orb" style="background: radial-gradient(circle at 35% 35%, #444 0%, #111 60%, #000 100%);"></span>
+                                <span class="orb-text">أسود</span>
                             </label>
 
                             <!-- White Option -->
-                            <label class="btn-wrapper" style="opacity: 1; animation: none; cursor: pointer;">
-                                <input type="radio" name="color" value="أبيض" style="display: none;">
-                                <div class="orb-btn btn-silver" style="--glow-color: 200, 200, 200;">
-                                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                                        <path d="M5 13 L10 17.5 L19 7"></path>
-                                    </svg>
-                                </div>
-                                <span class="btn-label" style="position: static; opacity: 1; filter: none; margin-right: 8px;">أبيض</span>
+                            <label class="glossy-orb-card">
+                                <input type="radio" name="color" value="أبيض">
+                                <span class="glossy-orb" style="background: radial-gradient(circle at 35% 35%, #fff 0%, #ddd 60%, #999 100%);"></span>
+                                <span class="orb-text">أبيض</span>
                             </label>
 
                             <!-- Green Option (#30563b) -->
-                            <label class="btn-wrapper" style="opacity: 1; animation: none; cursor: pointer;">
-                                <input type="radio" name="color" value="أخضر" style="display: none;">
-                                <div class="orb-btn btn-mauve" style="--glow-color: 48, 86, 59;">
-                                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                                        <path d="M5 13 L10 17.5 L19 7"></path>
-                                    </svg>
-                                </div>
-                                <span class="btn-label" style="position: static; opacity: 1; filter: none; margin-right: 8px;">أخضر</span>
+                            <label class="glossy-orb-card">
+                                <input type="radio" name="color" value="أخضر">
+                                <span class="glossy-orb" style="background: radial-gradient(circle at 35% 35%, #4e8a5e 0%, #30563b 60%, #172c1e 100%);"></span>
+                                <span class="orb-text">أخضر</span>
                             </label>
 
                         </div>
                     </div>
-
                     <!-- Print Placement Selection -->
                     <div class="input-group">
                         <label>مكان الطباعة *</label>
