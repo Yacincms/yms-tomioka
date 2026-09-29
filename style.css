@@ -371,3 +371,37 @@ body {
                 inset 0 -3px 5px rgba(0, 0, 0, 0.6), 
                 0 0 10px rgba(16, 185, 129, 0.6);
 }
+
+.options-grid {
+    display: flex;
+    gap: 10px;
+    direction: rtl;
+}
+
+.radio-card {
+    flex: 1;
+    background: #09090b;
+    border: 1px solid #3f3f46; /* Clean visible frame */
+    padding: 12px 10px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #f4f4f5;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.radio-card input {
+    margin-left: 6px;
+    accent-color: #10b981;
+}
+
+.radio-card:hover {
+    border-color: #71717a;
+}
+
+/* Highlight card when selected */
+.radio-card:has(input[type="radio"]:checked) {
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.08);
+}
