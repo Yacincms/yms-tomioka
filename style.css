@@ -405,3 +405,44 @@ body {
     border-color: #10b981;
     background: rgba(16, 185, 129, 0.08);
 }
+/* Store-Style Framed Color Dots */
+.store-color-picker {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    direction: ltr; /* Keeps dots ordered nicely */
+    padding: 6px 0;
+}
+
+.store-dot-label {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: #09090b;
+    border: 1px solid #3f3f46;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.store-dot-label input[type="radio"] {
+    display: none;
+}
+
+.store-dot {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Selected State: Clean Emerald/White Ring Frame */
+.store-dot-label:has(input[type="radio"]:checked) {
+    border-color: #10b981;
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+    transform: scale(1.05);
+}
