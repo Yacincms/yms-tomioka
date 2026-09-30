@@ -305,3 +305,44 @@ body {
     transform: scale(1.15);
     box-shadow: 0 0 0 3px #18181b, 0 0 0 5px #10b981;
 }
+
+/* Expand the main image display container */
+.main-image-box {
+    width: 100%;
+    max-width: 500px; /* Increase this from whatever smaller value it was */
+    margin: 0 auto 20px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #121216;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.main-image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Make thumbnails match nicely underneath */
+.thumbnail-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.thumbnail-gallery img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.thumbnail-gallery img:hover {
+    border-color: #f97316;
+    transform: scale(1.05);
+}
