@@ -306,15 +306,23 @@ body {
     box-shadow: 0 0 0 3px #18181b, 0 0 0 5px #10b981;
 }
 
-/* Expand the main image display container */
+/* Clean and Big Main Image Box */
+.product-visuals {
+    flex: 1.2; /* Give di image column more weight */
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .main-image-box {
     width: 100%;
-    max-width: 500px; /* Increase this from whatever smaller value it was */
+    max-width: 620px; /* Make am much bigger so e go pop well well */
     margin: 0 auto 20px auto;
     border-radius: 12px;
     overflow: hidden;
-    background: #121216;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #18181b;
+    border: 1px solid #27272a;
 }
 
 .main-image-box img {
@@ -324,7 +332,7 @@ body {
     object-fit: cover;
 }
 
-/* Make thumbnails match nicely underneath */
+/* Thumbnails Gallery */
 .thumbnail-gallery {
     display: flex;
     justify-content: center;
@@ -333,21 +341,16 @@ body {
 }
 
 .thumbnail-gallery img {
-    width: 80px;
-    height: 80px;
+    width: 85px;
+    height: 85px;
     object-fit: cover;
     border-radius: 8px;
     cursor: pointer;
-    border: 2px solid transparent;
+    border: 2px solid #27272a;
     transition: all 0.2s ease;
 }
 
 .thumbnail-gallery img:hover {
-    border-color: #f97316;
+    border-color: #10b981;
     transform: scale(1.05);
-}
-.main-image-box {
-    width: 100%;
-    max-width: 480px; /* Adjust this higher (e.g., 520px or 560px) if you want it even bigger */
-    margin: 0 auto;
 }
