@@ -346,3 +346,8 @@ body {
     border-color: #f97316;
     transform: scale(1.05);
 }
+.main-image-box {
+    width: 100%;
+    max-width: 480px; /* Adjust this higher (e.g., 520px or 560px) if you want it even bigger */
+    margin: 0 auto;
+}
