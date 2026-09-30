@@ -355,3 +355,38 @@ body {
     transform: scale(1.15);
     box-shadow: 0 0 0 3px #121216, 0 0 0 5px #10b981;
 }
+
+/* Pure Circular Color Swatches */
+.store-color-picker {
+    display: flex;
+    gap: 15px;
+    direction: rtl;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.color-swatch-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.color-swatch-label input[type="radio"] {
+    display: none; /* Hide native radio */
+}
+
+.swatch-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid #f97316; /* Signature Orange Border */
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+/* Active Highlight: Pure circular scale and green ring */
+.color-swatch-label input[type="radio"]:checked + .swatch-circle {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 3px #121216, 0 0 0 5px #10b981;
+}
