@@ -64,22 +64,27 @@
                         <input type="tel" name="phone" required placeholder="أدخل رقم هاتفك" style="direction: rtl; text-align: right;">
                     </div>
 
-                    <!-- Color Selection -->
+                    <!-- Circular Color Swatches with Accent Border -->
                     <div class="input-group">
                         <label>اللون *</label>
-                        <div class="options-grid">
-                            <label class="radio-card">
-                                <input type="radio" name="color" value="أسود" checked> أسود
+                        <div class="store-color-picker">
+                            <label class="color-swatch-label" title="أسود">
+                                <input type="radio" name="color" value="أسود" checked>
+                                <span class="swatch-circle" style="background-color: #000000;"></span>
+                                <span class="swatch-name">أسود</span>
                             </label>
-                            <label class="radio-card">
-                                <input type="radio" name="color" value="أبيض"> أبيض
+                            <label class="color-swatch-label" title="أبيض">
+                                <input type="radio" name="color" value="أبيض">
+                                <span class="swatch-circle" style="background-color: #ffffff;"></span>
+                                <span class="swatch-name">أبيض</span>
                             </label>
-                            <label class="radio-card">
-                                <input type="radio" name="color" value="أخضر"> أخضر
+                            <label class="color-swatch-label" title="أخضر">
+                                <input type="radio" name="color" value="أخضر">
+                                <span class="swatch-circle" style="background-color: #30563b;"></span>
+                                <span class="swatch-name">أخضر</span>
                             </label>
                         </div>
                     </div>
-
                     <!-- Print Placement Selection -->
                     <div class="input-group">
                         <label>مكان الطباعة *</label>
