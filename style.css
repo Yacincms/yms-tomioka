@@ -310,3 +310,48 @@ body {
     border-color: #10b981;
     background: rgba(16, 185, 129, 0.08);
 }
+
+/* Minimalist Circular Color Swatches */
+.store-color-picker {
+    display: flex;
+    gap: 15px;
+    direction: rtl;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.color-swatch-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.color-swatch-label input[type="radio"] {
+    display: none; /* Hide native radio */
+}
+
+.swatch-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid #f97316; /* Signature Orange Border */
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.swatch-name {
+    color: #f4f4f5;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Active Highlight: Scale up and add an emerald/orange glow ring */
+.color-swatch-label input[type="radio"]:checked + .swatch-circle {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 3px #121216, 0 0 0 5px #10b981;
+}
