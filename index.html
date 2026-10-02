@@ -50,6 +50,10 @@
 
                 <form action="https://api.web3forms.com/submit" method="POST" class="cod-form">
                     <input type="hidden" name="access_key" value="9a311229-3b87-43b8-b175-f749fe4cc23f">
+                    
+                    <!-- Hidden inputs to capture live shipping & total prices in email -->
+                    <input type="hidden" name="shipping_price" id="hidden-shipping" value="400 دج">
+                    <input type="hidden" name="total_price" id="hidden-total" value="3,200 دج">
 
                     <!-- 1. Name Field (At the Top) -->
                     <div class="input-group">
@@ -229,8 +233,16 @@
 
             const totalPrice = productPrice + shippingPrice;
 
-            document.getElementById('shipping-display').innerText = shippingPrice.toLocaleString() + ' دج';
-            document.getElementById('total-display').innerText = totalPrice.toLocaleString() + ' دج';
+            const formattedShipping = shippingPrice.toLocaleString() + ' دج';
+            const formattedTotal = totalPrice.toLocaleString() + ' دج';
+
+            // Update visible price breakdown on the page
+            document.getElementById('shipping-display').innerText = formattedShipping;
+            document.getElementById('total-display').innerText = formattedTotal;
+
+            // Push prices into hidden form inputs so they arrive in your email
+            document.getElementById('hidden-shipping').value = formattedShipping;
+            document.getElementById('hidden-total').value = formattedTotal;
         }
     </script>
 </body>
