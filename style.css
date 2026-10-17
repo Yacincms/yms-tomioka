@@ -41,19 +41,22 @@ body {
 .main-image-box {
     width: 100%;
     max-width: 620px;
-    height: 400px; /* Locks a clean, uniform height for all slides */
+    height: 380px;
     margin: 0 auto 20px auto;
     border-radius: 12px;
     overflow: hidden;
-    background: #18181b;
+    background: #18181b; /* Matches your dark theme to fill any side gaps cleanly */
     border: 1px solid #27272a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-image-box img {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover; /* Fills the container completely with no gaps */
+    object-fit: contain; /* Ensures entire image scales nicely inside the box without cutting or stretching */
 }
 
 /* Thumbnails Gallery */
