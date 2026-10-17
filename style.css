@@ -37,23 +37,26 @@ body {
     align-items: center;
 }
 
-/* Stable, uniform landscape container size */
+/* Dynamic container that adapts to landscape or portrait images */
 .main-image-box {
     width: 100%;
     max-width: 620px;
-    height: 380px;
+    height: auto;
     margin: 0 auto 20px auto;
     border-radius: 12px;
     overflow: hidden;
     background: #18181b;
     border: 1px solid #27272a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-image-box img {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* Thumbnails Gallery */
@@ -314,24 +317,4 @@ body {
         flex-direction: column;
         margin: 20px auto;
     }
-}
-.main-image-box {
-    width: 100%;
-    max-width: 620px;
-    height: auto; /* Lets the container resize based on the active image */
-    margin: 0 auto 20px auto;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #18181b;
-    border: 1px solid #27272a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.main-image-box img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
 }
