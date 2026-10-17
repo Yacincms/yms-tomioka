@@ -37,28 +37,28 @@ body {
     align-items: center;
 }
 
-/* Dynamic container that adapts to landscape or portrait images */
+/* Dynamic container: Adapts height to any active image */
 .main-image-box {
     width: 100%;
-    max-width: 620px;
-    height: 380px;
+    max-width: 620px; /* Keeps the box centered and stops it from getting too wide */
+    height: auto;     /* Crucial: Removes the fixed height limit */
     margin: 0 auto 20px auto;
     border-radius: 12px;
     overflow: hidden;
-    background: #18181b; /* Matches your dark theme to fill any side gaps cleanly */
+    background: #18181b;
     border: 1px solid #27272a;
+    /* Centers the image inside the box for cases with white space */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .main-image-box img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: contain; /* Ensures entire image scales nicely inside the box without cutting or stretching */
+    max-width: 100%;  /* Prevents horizontal stretching */
+    height: auto;     /* Maintains native aspect ratio */
+    display: block;   /* Standard clean display rule */
+    object-fit: contain; /* Ensures the whole image fits without cropping */
 }
-
 /* Thumbnails Gallery */
 .thumbnail-gallery {
     display: flex;
