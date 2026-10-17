@@ -315,3 +315,10 @@ body {
         margin: 20px auto;
     }
 }
+.main-image-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain; /* Keeps the entire image visible without cropping */
+    background: #18181b; /* Matches your dark container background */
+}
