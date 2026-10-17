@@ -41,7 +41,7 @@ body {
 .main-image-box {
     width: 100%;
     max-width: 620px;
-    height: auto;
+    height: 420px; /* Uniform height for the display box */
     margin: 0 auto 20px auto;
     border-radius: 12px;
     overflow: hidden;
@@ -53,7 +53,9 @@ body {
 }
 
 .main-image-box img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
     height: auto;
     display: block;
     object-fit: contain;
