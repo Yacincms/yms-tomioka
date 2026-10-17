@@ -56,7 +56,7 @@ body {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: contain;
+    object-fit: cover; /* Forces every image to fill the box entirely from edge to edge */
 }
 /* Thumbnails Gallery */
 .thumbnail-gallery {
