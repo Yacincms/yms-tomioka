@@ -20,12 +20,21 @@ body {
     font-weight: 700;
 }
 
+.page-wrapper {
+    max-width: 1000px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0 20px;
+}
+
 .product-visuals {
     flex: 1.2;
     min-width: 320px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Aligns main image box and thumbnails to the left */
+    align-items: center;
 }
 
 /* Perfect 1:1 Square Container for 1200x1200px Images */
@@ -33,7 +42,7 @@ body {
     width: 100%;
     max-width: 580px;
     aspect-ratio: 1 / 1;
-    margin: 0 0 20px 0; /* Left aligned */
+    margin: 0 auto 20px auto;
     border-radius: 12px;
     overflow: hidden;
     background: #18181b;
@@ -50,14 +59,12 @@ body {
     object-fit: cover;
 }
 
-/* Thumbnails Gallery - Left Aligned */
+/* Thumbnails Gallery */
 .thumbnail-gallery {
     display: flex;
-    justify-content: flex-start; /* Aligns thumbnails to the left side */
+    justify-content: center;
     gap: 12px;
     margin-bottom: 25px;
-    width: 100%;
-    max-width: 580px;
 }
 
 .thumbnail-gallery img {
@@ -123,8 +130,6 @@ body {
     border: 1px solid #27272a;
     padding: 24px;
     border-radius: 12px;
-    max-height: 650px;
-    overflow-y: auto;
 }
 
 .order-box h3 {
@@ -307,11 +312,5 @@ body {
     .page-wrapper {
         flex-direction: column;
         margin: 20px auto;
-    }
-    .product-visuals {
-        align-items: center; /* Center on mobile screens for better touch usability */
-    }
-    .thumbnail-gallery {
-        justify-content: center;
     }
 }
