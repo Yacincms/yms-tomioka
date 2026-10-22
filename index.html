@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YMS | Tomioka Giyu Edition</title>
+    <title>YMS | Oversized Hoodies Exclusive Edition</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
     <!-- Meta Pixel Code -->
@@ -37,25 +37,24 @@
       <!-- Left/Top Column: Product Visuals & Gallery -->
         <div class="product-visuals" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
             <div class="main-image-box" style="width: 100%; max-width: 580px;">
-                <img id="active-img" src="product-1.webp" alt="T-shirt Giyu Tomioka" style="width: 100%; height: auto; display: block;">
+                <img id="active-img" src="2Filename.jpg" alt="Hoodie Oversized Exclusive" style="width: 100%; height: auto; display: block; object-fit: cover;">
             </div>
             <!-- Thumbnails Gallery -->
             <div class="thumbnail-gallery">
-                <img src="1Filename.webp" onclick="changeImage('1Filename.webp')" alt="Thumbnail 1">
-                <img src="2Filename.webp" onclick="changeImage('2Filename.webp')" alt="Thumbnail 2">
-                <img src="3Filename.webp" onclick="changeImage('3Filename.webp')" alt="Thumbnail 3">
-                <img src="4Filename.webp" onclick="changeImage('4Filename.webp')" alt="Thumbnail 4">
+                <img src="2Filename.jpg" onclick="selectDesignAndImage('2Filename.jpg', 'gojo-radio')" alt="Gojo Hoodie">
+                <img src="3Filename.jpg" onclick="selectDesignAndImage('3Filename.jpg', 'luffy-radio')" alt="Luffy Hoodie">
+                <img src="4Filename.jpg" onclick="selectDesignAndImage('4Filename.jpg', 'solo-radio')" alt="Solo Leveling Hoodie">
             </div>
-            
         </div>
+
         <!-- Right/Bottom Column: Product Info & Direct COD Form -->
         <div class="product-purchase-section">
             <div class="brand-tag">YMS STREETWEAR</div>
-            <h1 class="product-title">T-shirt Giyu Tomioka - Oversized</h1>
+            <h1 class="product-title">Hoodie Oversized Exclusive</h1>
             
             <div class="price-box">
-                <span class="old-price">3,500 دج</span>
-                <span class="current-price">2,800 دج</span>
+                <span class="old-price">4,500 دج</span>
+                <span class="current-price">3,600 دج</span>
             </div>
 
             <p class="product-desc">
@@ -73,21 +72,40 @@
                     
                     <!-- Hidden inputs to capture live shipping & total prices in email -->
                     <input type="hidden" name="shipping_price" id="hidden-shipping" value="400 دج">
-                    <input type="hidden" name="total_price" id="hidden-total" value="3,200 دج">
+                    <input type="hidden" name="total_price" id="hidden-total" value="4,000 دج">
 
-                    <!-- 1. Name Field (At the Top) -->
+                    <!-- 1. Name Field -->
                     <div class="input-group">
                         <label>الاسم الكامل *</label>
                         <input type="text" name="name" required placeholder="أدخل اسمك الكامل">
                     </div>
 
-                    <!-- Phone Field (RTL Aligned) -->
+                    <!-- Phone Field -->
                     <div class="input-group">
                         <label>رقم الهاتف *</label>
                         <input type="tel" name="phone" required placeholder="أدخل رقم هاتفك" style="direction: rtl; text-align: right;">
                     </div>
 
-                <!-- Minimalist Pure Circular Color Swatches -->
+                    <!-- Design Selection Radio Cards -->
+                    <div class="input-group">
+                        <label>اختيار التصميم *</label>
+                        <div class="options-grid design-selector">
+                            <label class="radio-card">
+                                <input type="radio" id="gojo-radio" name="design" value="Gojo Hoodie" checked onchange="changeImage('2Filename.jpg')"> 
+                                Gojo
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" id="luffy-radio" name="design" value="Luffy Gear 5 Hoodie" onchange="changeImage('3Filename.jpg')"> 
+                                Luffy Gear 5
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" id="solo-radio" name="design" value="Solo Leveling Hoodie" onchange="changeImage('4Filename.jpg')"> 
+                                Solo Leveling
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Minimalist Pure Circular Color Swatches -->
                     <div class="input-group">
                         <label>اللون *</label>
                         <div class="store-color-picker">
@@ -99,20 +117,14 @@
                                 <input type="radio" name="color" value="أبيض">
                                 <span class="swatch-circle" style="background-color: #ffffff;"></span>
                             </label>
-                            <label class="color-swatch-label" title="أخضر">
-                                <input type="radio" name="color" value="أخضر">
-                                <span class="swatch-circle" style="background-color: #30563b;"></span>
+                            <label class="color-swatch-label" title="أخضر زيتوني">
+                                <input type="radio" name="color" value="أخضر زيتوني">
+                                <span class="swatch-circle" style="background-color: #4b5320;"></span>
                             </label>
-                        </div>
-                    </div>
-
-                    
-                    <!-- Print Placement Selection -->
-                    <div class="input-group">
-                        <label>مكان الطباعة *</label>
-                        <div class="options-grid">
-                            <label class="radio-card"><input type="radio" name="print_placement" value="الواجهة الأمامية" checked> الواجهة الأمامية</label>
-                            <label class="radio-card"><input type="radio" name="print_placement" value="الواجهة الخلفية"> الواجهة الخلفية</label>
+                            <label class="color-swatch-label" title="أزرق داكن">
+                                <input type="radio" name="color" value="أزرق داكن">
+                                <span class="swatch-circle" style="background-color: #1b263b;"></span>
+                            </label>
                         </div>
                     </div>
 
@@ -124,6 +136,7 @@
                             <option value="M">M</option>
                             <option value="L">L</option>
                             <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
                         </select>
                     </div>
 
@@ -192,7 +205,7 @@
                         </select>
                     </div>
 
-                    <!-- Baladia (Municipality) Field -->
+                    <!-- Baladia Field -->
                     <div class="input-group">
                         <label>البلدية *</label>
                         <input type="text" name="baladia" required placeholder="أدخل اسم البلدية (مثال: باب الزوار)">
@@ -215,9 +228,9 @@
 
                     <!-- Live Price Breakdown Box -->
                     <div class="price-breakdown">
-                        <div class="line-item"><span>سعر المنتج:</span> <span>2,800 دج</span></div>
+                        <div class="line-item"><span>سعر المنتج:</span> <span>3,600 دج</span></div>
                         <div class="line-item"><span>سعر التوصيل:</span> <span id="shipping-display">400 دج</span></div>
-                        <div class="line-item total-item"><span>المجموع الكلي:</span> <span id="total-display">3,200 دج</span></div>
+                        <div class="line-item total-item"><span>المجموع الكلي:</span> <span id="total-display">4,000 دج</span></div>
                     </div>
 
                     <button type="submit" class="order-btn">اطلب الآن - الدفع عند الاستلام 🛒</button>
@@ -237,8 +250,13 @@
             document.getElementById('active-img').src = filename;
         }
 
+        function selectDesignAndImage(filename, radioId) {
+            document.getElementById('active-img').src = filename;
+            document.getElementById(radioId).checked = true;
+        }
+
         function updateShipping() {
-            const productPrice = 2800;
+            const productPrice = 3600;
             const wilayaSelect = document.getElementById('wilaya-select');
             const selectedOption = wilayaSelect.options[wilayaSelect.selectedIndex];
             
@@ -256,11 +274,9 @@
             const formattedShipping = shippingPrice.toLocaleString() + ' دج';
             const formattedTotal = totalPrice.toLocaleString() + ' دج';
 
-            // Update visible price breakdown on the page
             document.getElementById('shipping-display').innerText = formattedShipping;
             document.getElementById('total-display').innerText = formattedTotal;
 
-            // Push prices into hidden form inputs so they arrive in your email
             document.getElementById('hidden-shipping').value = formattedShipping;
             document.getElementById('hidden-total').value = formattedTotal;
         }
