@@ -27,6 +27,7 @@ body {
     flex-wrap: wrap;
     gap: 40px;
     padding: 0 20px;
+    flex-direction: row-reverse; /* This flips the columns so the images go to the left */
 }
 
 .product-visuals {
