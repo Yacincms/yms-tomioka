@@ -37,10 +37,11 @@
       <!-- Left/Top Column: Product Visuals & Gallery -->
         <div class="product-visuals" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
             <div class="main-image-box" style="width: 100%; max-width: 580px;">
-                <img id="active-img" src="2Filename.webp" alt="Hoodie Oversized Exclusive" style="width: 100%; height: auto; display: block; object-fit: cover;">
+                <img id="active-img" src="1Filename.webp" alt="Hoodie Oversized Exclusive" style="width: 100%; height: auto; display: block; object-fit: cover;">
             </div>
             <!-- Thumbnails Gallery -->
             <div class="thumbnail-gallery">
+                <img src="1Filename.webp" onclick="changeImage('1Filename.webp')" alt="Hero Overview">
                 <img src="2Filename.webp" onclick="selectDesignAndImage('2Filename.webp', 'gojo-radio')" alt="Gojo Hoodie">
                 <img src="3Filename.webp" onclick="selectDesignAndImage('3Filename.webp', 'luffy-radio')" alt="Luffy Hoodie">
                 <img src="4Filename.webp" onclick="selectDesignAndImage('4Filename.webp', 'solo-radio')" alt="Solo Leveling Hoodie">
@@ -199,79 +200,4 @@
 
                     <!-- Baladia Field -->
                     <div class="input-group">
-                        <label>البلدية *</label>
-                        <input type="text" name="baladia" required placeholder="أدخل اسم البلدية (مثال: باب الزوار)">
-                    </div>
-                    
-                    <!-- Delivery Type Options -->
-                    <div class="input-group">
-                        <label>طريقة التوصيل *</label>
-                        <div class="options-grid">
-                            <label class="radio-card">
-                                <input type="radio" name="delivery_type" value="توصيل للمكتب (Stop Desk)" checked onchange="updateShipping()"> 
-                                توصيل للمكتب
-                            </label>
-                            <label class="radio-card">
-                                <input type="radio" name="delivery_type" value="توصيل للمنزل (Home)" onchange="updateShipping()"> 
-                                توصيل للمنزل
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Live Price Breakdown Box -->
-                    <div class="price-breakdown">
-                        <div class="line-item"><span>سعر المنتج:</span> <span>3,600 دج</span></div>
-                        <div class="line-item"><span>سعر التوصيل:</span> <span id="shipping-display">400 دج</span></div>
-                        <div class="line-item total-item"><span>المجموع الكلي:</span> <span id="total-display">4,000 دج</span></div>
-                    </div>
-
-                    <button type="submit" class="order-btn">اطلب الآن - الدفع عند الاستلام 🛒</button>
-                </form>
-            </div>
-
-            <!-- Footer link back to main store -->
-            <div class="store-redirect">
-                <a href="https://www.ymsdz.com" target="_blank">تصفح الكاتالوج الكامل في المتجر الرئيسي 🛍️</a>
-            </div>
-        </div>
-
-    </div>
-
-    <script>
-        function changeImage(filename) {
-            document.getElementById('active-img').src = filename;
-        }
-
-        function selectDesignAndImage(filename, radioId) {
-            document.getElementById('active-img').src = filename;
-            document.getElementById(radioId).checked = true;
-        }
-
-        function updateShipping() {
-            const productPrice = 3600;
-            const wilayaSelect = document.getElementById('wilaya-select');
-            const selectedOption = wilayaSelect.options[wilayaSelect.selectedIndex];
-            
-            const deliveryType = document.querySelector('input[name="delivery_type"]:checked').value;
-            let shippingPrice = 0;
-
-            if (deliveryType.includes('Home')) {
-                shippingPrice = parseInt(selectedOption.getAttribute('data-home'));
-            } else {
-                shippingPrice = parseInt(selectedOption.getAttribute('data-desk'));
-            }
-
-            const totalPrice = productPrice + shippingPrice;
-
-            const formattedShipping = shippingPrice.toLocaleString() + ' دج';
-            const formattedTotal = totalPrice.toLocaleString() + ' دج';
-
-            document.getElementById('shipping-display').innerText = formattedShipping;
-            document.getElementById('total-display').innerText = formattedTotal;
-
-            document.getElementById('hidden-shipping').value = formattedShipping;
-            document.getElementById('hidden-total').value = formattedTotal;
-        }
-    </script>
-</body>
-</html>
+                        <label>البلدية *</
