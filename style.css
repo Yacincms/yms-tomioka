@@ -37,16 +37,16 @@ body {
     align-items: center;
 }
 
-/* Dynamic container: Adapts height to any active image */
+/* Perfect 1:1 Square Container for 1200x1200px Images */
 .main-image-box {
     width: 100%;
-    max-width: 620px;
-    height: 380px;
+    max-width: 580px;
+    aspect-ratio: 1 / 1;
     margin: 0 auto 20px auto;
     border-radius: 12px;
     overflow: hidden;
-    background: #8c9296; /* Matches your exact mockup background grey */
-    border: none; /* Removes the border so it melts seamlessly into the view */
+    background: #18181b;
+    border: 1px solid #27272a;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,8 +56,9 @@ body {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover; /* Forces every image to fill the box entirely from edge to edge */
+    object-fit: cover;
 }
+
 /* Thumbnails Gallery */
 .thumbnail-gallery {
     display: flex;
@@ -168,15 +169,15 @@ body {
     padding: 12px 10px;
     text-align: center;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 700;
     color: #f4f4f5;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
 .radio-card input {
-    margin-left: 6px;
-    accent-color: #10b981;
+    display: none;
 }
 
 .radio-card:hover {
@@ -185,7 +186,8 @@ body {
 
 .radio-card:has(input[type="radio"]:checked) {
     border-color: #10b981;
-    background: rgba(16, 185, 129, 0.08);
+    background: rgba(16, 185, 129, 0.12);
+    color: #10b981;
 }
 
 .input-group input[type="text"], 
@@ -277,17 +279,12 @@ body {
     direction: rtl;
     align-items: center;
     padding: 6px 0;
-    background: transparent !important;
-    border: none !important;
 }
 
 .color-swatch-label {
     display: inline-flex;
     align-items: center;
     cursor: pointer;
-    background: transparent !important;
-    border: none !important;
-    padding: 0 !important;
 }
 
 .color-swatch-label input[type="radio"] {
@@ -299,14 +296,14 @@ body {
     height: 28px;
     border-radius: 50%;
     display: inline-block;
-    border: 2px solid #f97316;
+    border: 2px solid #3f3f46;
     transition: all 0.2s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-    background-clip: padding-box;
 }
 
 .color-swatch-label input[type="radio"]:checked + .swatch-circle {
     transform: scale(1.15);
+    border-color: #fff;
     box-shadow: 0 0 0 3px #18181b, 0 0 0 5px #10b981;
 }
 
